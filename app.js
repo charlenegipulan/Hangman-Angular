@@ -22,8 +22,23 @@ var newGame = function() {
     $scope.correctLettersChosen = [];
     $scope.guesses  = 6;
     $scope.displayWord = '';
+
     selectedWord = selectRandomWord();
+     
+    var tempDisplayWord = '';
     console.log(selectedWord);
+    for (var i = 0; i < selectedWord.length; i++) {
+        tempDisplayWord += '_';
+    }
+    console.log(tempDisplayWord);
+    $scope.displayWord = tempDisplayWord;
+
+
+}
+
+$scope.letterChosen = function() {
+    
+
 }
 
 newGame();
