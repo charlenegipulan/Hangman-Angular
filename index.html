@@ -6,13 +6,30 @@
     <title>Hangman App</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="app.js"></script>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body data-ng-app="HangmanApp" ng-controller="GameController">
     <div>
+        <div class="head">
+        </div>
+        <div class="body">
+            <div class="left-arm">
+            </div>
+            <div class="spine">
+            </div>
+            <div class="right-arm">
+            </div>
+        </div>
+        <div class="legs">
+            <div class="left-leg">
+            </div>
+            <div class="right-leg">
+            </div>
+        </div>
         <div>
             Guesses Left : {{guesses}}
         </div>
-        <div>
+        <div class="incorrectGuesses">
             Incorrect Guesses : <span ng-repeat="letter in incorrectLettersChosen">{{letter}}</span>
         </div>
         <div>
